@@ -1,0 +1,9 @@
+h1{
+    color: darkblue
+}
+
+td{
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+}

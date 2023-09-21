@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafío de los cuadros</title>
+        <link rel="stylesheet" href="/styles/style.css"> 
+    </head>
+    <body>
+        <%
+        let cantidad
+        %>
+        <h1>Desafío de los cuadros</h1>
+        <p>El desafío consiste en generar un cuadrilatero dividido a su vez con otros cuadrados, de tal forma que se reproduzca un tablero de ajedrez. Pero los colores de este tablero son rojos y azules, y además deben cumplir con la siguiente consigna: Debe haber igual cantidad de cuadros rojos y azules, de tal forma que no haya dos filas o columnas con la misma cantidad de cuadros rojos. ¿Se podrá? ¿Y en tableros más grandes? </p>
+        <h3>Tablero:</h3>
+        <div>
+            <table border="1">
+                <%tablero.map((el)=>{ %>
+                    <tr>
+                        <% el.map((td)=>{%>
+                            <td class="casillero" style="background-color: <%=td.color%>; color: white"><%=td.numero%></td>
+                        <%})%>
+                        <td class="cantidadFila">Rojos: 4</td>
+                    </tr>
+                <% })%>
+                <tr>
+                    <%tablero.map((el)=>{ %>
+                        <td class="cantidadColumna">Rojos: 4</td>
+                    <% })%>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <div>
+                <h3>Cantidad de rojos:</h3>
+                <p class="cantRojo">32</p>
+            </div>
+            <div>
+                <h3>Cantidad de azules:</h3>
+                <p class="cantAzul">32</p>
+            </div>
+        </div>
+        <script src="/script.js"></script>
+    </body>
+</html>
